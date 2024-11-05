@@ -15,7 +15,7 @@ export const addRepositoriesToResult: Fetcher = async (
     `
   query ($cursor: String, $organization: String!) {
     organization(login:$organization) {
-      repositories(privacy:PUBLIC, first:100, isFork:false, isArchived:false, after: $cursor)
+      repositories(first:100, isFork:false, isArchived:false, after: $cursor)
       {
         pageInfo {
           hasNextPage
